@@ -1,9 +1,19 @@
 [package]
-name = "email-sender"
+name = "auth"
 version = "0.1.0"
 edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "auth"
 
 [dependencies]
 actix-web = "4.9.0"
 serde = { version = "1.0.217", features = ["derive"] }
 tokio = { version = "1.43.0", features = ["full"] }
+
+[dev-dependencies]
+reqwest = "0.12.12"
